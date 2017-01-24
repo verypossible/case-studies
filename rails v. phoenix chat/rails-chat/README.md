@@ -51,7 +51,9 @@ Now that we've got basic setup out of the way let's dig into some [ActionCable](
 
 *Note - [Testing of Channels is not fully supported via the Rails API.](https://github.com/rails/rails/pull/23211) The official recommendation is to use full integration testing for now. We do not incorporate all of that at this time.
 
-We'll start by defining two callbacks in our channel.rb file.
+We'll start by defining two callbacks in our channel.rb file:
+
+#### Channel
 `app/channels/chat_channel.rb`
 ```Ruby
 class ChatChannel < ApplicationCable::Channel
@@ -81,6 +83,8 @@ end
 ```
 
 Now we have to implement the interaction from the client side. This uses the ActionCable JS API available in Javascript and Coffeescript. First we create a subscription and provide a callback for when we receive messages on the subscription. We also included some fancy JS for displaying the messages in the UI:
+
+#### Client
 `app/assets/javascripts/channels/chats.js`
 ```JS
 App.chat = App.cable.subscriptions.create({ channel: 'ChatChannel' }, {
