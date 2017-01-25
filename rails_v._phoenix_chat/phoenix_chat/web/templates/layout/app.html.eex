@@ -8,6 +8,7 @@
     <meta name="author" content="">
 
     <title>Hello PhoenixChat!</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   </head>
 
