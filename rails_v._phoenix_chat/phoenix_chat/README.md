@@ -97,7 +97,7 @@ defmodule PhoenixChat.ChatChannel do
 end
 ```
 
-Now we just need to implement the front end client. First we are going to include jQuery so we can easily manipulate the DOM. We'll do that in the appliation layout. Make sure it is included before the rest of the JS:
+Now we just need to implement the front end client. First we are going to include jQuery so we can easily manipulate the DOM. We'll do that in the application layout. Make sure it is included before the rest of the JS:
 
 #### Layout
 `web/templates/layout/app.html.eex`
@@ -156,4 +156,4 @@ channel.join()
 export default socket
 ```
 
-And thats it! Prett slick.
+And that's it! Pretty slick.
